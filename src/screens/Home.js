@@ -1,15 +1,16 @@
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import Carousel from '../componnent/Carousel';
 import Service from '../pages/Service';
+import Ct_home_service_tab_section from '../componnent/Ct_home_service_tab_section';
 
 const Home = ({navigation}) => {
-
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor: '#ffffff'}}>
       <ScrollView>
         <View style={styles.container}>
           <Carousel navigation={navigation} />
           <Service navigation={navigation} />
+          <Ct_home_service_tab_section navigation={navigation} />
         </View>
       </ScrollView>
     </SafeAreaView>
