@@ -118,12 +118,16 @@ const Service = props => {
           <Text style={styles.textStyle}>হাসপাতাল</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.apt_clickable_el} onPress>
+        <TouchableOpacity
+          style={styles.apt_clickable_el}
+          onPress={() => props.navigation.navigate('Police')}>
           {/* <ImageBackground source={dental} resizeMode="center" style={styles.image}/> */}
           <Image source={dental} style={styles.image} />
           <Text style={styles.textStyle}>পুলিশ</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.apt_clickable_el} onPress>
+        <TouchableOpacity
+          style={styles.apt_clickable_el}
+          onPress={() => props.navigation.navigate('FireService')}>
           {/* <ImageBackground source={therapy} resizeMode="center" style={styles.image}/> */}
           <Image source={therapy} style={styles.image} />
           <Text style={styles.textStyle}>ফায়ার সার্ভিস</Text>

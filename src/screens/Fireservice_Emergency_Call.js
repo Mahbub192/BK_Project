@@ -10,12 +10,12 @@ import {
   View,
 } from 'react-native';
 
-let img = require('../assets/images/hospital/healthcare.png');
+let img = require('../assets/fireservice/fireservice.png');
 let img1 = require('../assets/images/hospital/emergency-call.png');
 let img2 = require('../assets/images/hospital/doctors.png');
 let callImage = require('../assets/call.png');
 
-export default function Hospital_Emergency_Call(props) {
+export default function Fireservice_Emergency_Call(props) {
   return (
     <ScrollView style={styles.container}>
       <StatusBar
@@ -25,7 +25,7 @@ export default function Hospital_Emergency_Call(props) {
       />
       <View style={styles.contentContainer}>
         <View style={styles.takesewrvice}>
-          <Text style={styles.Taketext}>হাসপাতালের</Text>
+          <Text style={styles.Taketext}>ফায়ার সার্ভিস</Text>
           <Text style={styles.Taketext}>সেবা নিন</Text>
         </View>
         <View style={styles.takesewrviceImg}>
@@ -35,18 +35,14 @@ export default function Hospital_Emergency_Call(props) {
       <View style={styles.curveContainer}>
         <View style={styles.curve}>
           <View>
-            <Text style={styles.Service}> অফিস যোগাযোগ</Text>
+            <Text style={styles.Service}> যোগাযোগ</Text>
           </View>
           <View style={styles.card}>
             <View>
-              <View style={{}}>
-                <Text style={styles.cardText}>ডাঃ মোহাম্মদ আজিজুল হক</Text>
-                <Text style={styles.cardText}>
-                  উপজেলা স্বাস্থ্য ও পরিবার পরিকল্পনা কর্মকর্তা
-                </Text>
-                <Text style={styles.cardText}>উপজেলা স্বাস্থ্য কমপ্লেক্স</Text>
-                <Text style={styles.cardText}>বকশীগঞ্জ, জামালপুর।</Text>
-              </View>
+              <Text style={styles.cardText}>
+                অগ্নিকান্ডসহ যে কোন দূর্ঘটনায় বকশীগঞ্জ ফায়ার সার্ভিস ও সিভিল
+                ডিফেন্স স্টেশনের হট নাম্বারে যোগাযোগ করুন।
+              </Text>
               <View
                 style={{
                   display: 'flex',
@@ -56,17 +52,36 @@ export default function Hospital_Emergency_Call(props) {
                   marginTop: 8,
                 }}>
                 <TouchableOpacity
-                  onPress={() => Linking.openURL(`tel:01818809773`)}>
+                  onPress={() => Linking.openURL(`tel:০১৭১২৯৩৩৮৫৫`)}>
                   <Image source={callImage} style={styles.callImage} />
                 </TouchableOpacity>
                 <TouchableOpacity
-                  onPress={() => Linking.openURL(`tel:01818809773`)}>
-                  <Text style={[styles.cardText]}>মোবাইল : 01818809773</Text>
+                  onPress={() => Linking.openURL(`tel:০১৭১২৯৩৩৮৫৫`)}>
+                  <Text style={[styles.cardText]}>মোবাইল : ০১৭১২৯৩৩৮৫৫</Text>
+                </TouchableOpacity>
+              </View>
+
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  gap: 10,
+                  alignItems: 'center',
+                  marginTop: 8,
+                }}>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL(`tel:০১৭৩০-০০২৩৫৩`)}>
+                  <Image source={callImage} style={styles.callImage} />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL(`tel:০১৭১২৯৩৩৮৫৫`)}>
+                  <Text style={[styles.cardText]}>
+                    বিভাগীয় নিয়ন্ত্রন কক্ষঃ : ০১৭৩০-০০২৩৫৩
+                  </Text>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
-          <View style={styles.imageContainer} />
         </View>
       </View>
     </ScrollView>
@@ -76,7 +91,7 @@ export default function Hospital_Emergency_Call(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3ab54a',
+    backgroundColor: '#FFA07A',
   },
   contentContainer: {
     flex: 1,
@@ -88,7 +103,7 @@ const styles = StyleSheet.create({
   },
   takesewrvice: {
     flex: 1,
-    backgroundColor: '#3ab54a',
+    backgroundColor: '#FFA07A',
     paddingTop: 30,
     paddingLeft: 25,
   },
@@ -98,7 +113,7 @@ const styles = StyleSheet.create({
   },
   takesewrviceImg: {
     flex: 1,
-    backgroundColor: '#3ab54a',
+    backgroundColor: '#FFA07A',
     justifyContent: 'center',
     alignItems: 'center',
   },

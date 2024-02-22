@@ -9,9 +9,11 @@ import {
 
 const {width} = Dimensions.get('window');
 
-const Ct_img_btn = ({img, title, pressFunc}) => {
+const Ct_img_btn = ({navigation, img, title, pressFunc}) => {
   return (
-    <TouchableOpacity style={styles.btn} onPress={pressFunc}>
+    <TouchableOpacity
+      style={styles.btn}
+      onPress={() => navigation.navigate(pressFunc)}>
       <Image source={img} style={{width: 90, height: 70}} />
       <Text
         style={{

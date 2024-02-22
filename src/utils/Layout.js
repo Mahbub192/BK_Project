@@ -4,6 +4,14 @@ import * as React from 'react';
 import Home from '../screens/Home';
 import Hospital from '../screens/Hospital';
 import Hospital_Emergency_Call from '../screens/Hospital_Emergency_Call';
+import Hospital_Doctor_list from '../screens/Hospital_Doctor_list';
+import Police from '../screens/Police';
+import Police_Emergency_Call from '../screens/Police_Emergency_Call';
+import Police_list from '../screens/Police_list';
+import FireService from '../screens/Fireservice';
+import Fireservice_Emergency_Call from '../screens/Fireservice_Emergency_Call';
+import FireService_list from '../screens/FireService_list';
+import Ambulance_list from '../screens/Ambulance _list';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +25,25 @@ function Layout() {
           name="Hospital Emergency Call"
           component={Hospital_Emergency_Call}
         />
+        <Stack.Screen
+          name="Hospital Doctor List"
+          component={Hospital_Doctor_list}
+        />
+        <Stack.Screen name="Police" component={Police} />
+        <Stack.Screen
+          name="Police Emergency Call"
+          component={Police_Emergency_Call}
+        />
+        <Stack.Screen name="Police List" component={Police_list} />
+
+        <Stack.Screen name="FireService" component={FireService} />
+        <Stack.Screen
+          name="FireService Emergency Call"
+          component={Fireservice_Emergency_Call}
+        />
+        <Stack.Screen name="FireService list" component={FireService_list} />
+
+        <Stack.Screen name="Ambulance list" component={Ambulance_list} />
       </Stack.Navigator>
     </NavigationContainer>
   );

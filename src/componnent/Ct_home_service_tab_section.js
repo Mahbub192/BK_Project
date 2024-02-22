@@ -20,7 +20,7 @@ const upazilaNirbachon_img = require('../assets/images/service/nirbachon.png');
 const ambulance_img = require('../assets/images/service/ambulance.png');
 const {height, width, font} = Dimensions.get('window');
 
-export default function Ct_home_service_tab_section() {
+export default function Ct_home_service_tab_section(props) {
   const [selectedTab, setselectedTab] = useState('ডাক্তার চেম্বার');
   return (
     <View>
@@ -117,7 +117,12 @@ export default function Ct_home_service_tab_section() {
             justifyContent: 'space-evenly',
             paddingBottom: 20,
           }}>
-          <Ct_img_btn img={ambulance_img} title={'অ্যাম্বুলেন্স'} pressFunc />
+          <Ct_img_btn
+            img={ambulance_img}
+            title={'অ্যাম্বুলেন্স'}
+            pressFunc={'Ambulance list'}
+            navigation={props.navigation}
+          />
         </View>
       ) : null}
       {selectedTab === 'উপজেলা' ? (

@@ -9,11 +9,11 @@ import {
   View,
 } from 'react-native';
 
-let img = require('../assets/images/hospital/healthcare.png');
+let img = require('../assets/police/police.png');
 let img1 = require('../assets/images/hospital/emergency-call.png');
-let img2 = require('../assets/images/hospital/doctors.png');
+let img2 = require('../assets/police/police.png');
 
-export default function Hospital(props) {
+export default function Police(props) {
   return (
     <ScrollView style={styles.container}>
       <StatusBar
@@ -23,7 +23,7 @@ export default function Hospital(props) {
       />
       <View style={styles.contentContainer}>
         <View style={styles.takesewrvice}>
-          <Text style={styles.Taketext}>হাসপাতালের</Text>
+          <Text style={styles.Taketext}>পুলিশ স্টেশন</Text>
           <Text style={styles.Taketext}>সেবা নিন</Text>
         </View>
         <View style={styles.takesewrviceImg}>
@@ -39,7 +39,7 @@ export default function Hospital(props) {
             <TouchableOpacity
               style={styles.singleImageContainer}
               onPress={() =>
-                props.navigation.navigate('Hospital Emergency Call')
+                props.navigation.navigate('Police Emergency Call')
               }>
               <View style={styles.imageBackground}>
                 <Image source={img1} style={styles.img1} />
@@ -53,14 +53,14 @@ export default function Hospital(props) {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.singleImageContainer}
-              onPress={() => props.navigation.navigate('Hospital Doctor List')}>
+              onPress={() => props.navigation.navigate('Police List')}>
               <View style={styles.imageBackground}>
                 <Image source={img2} style={styles.img2} />
               </View>
               <View style={styles.textContainer}>
                 <Text
                   style={[styles.serviceText, {paddingTop: 8, fontSize: 18}]}>
-                  ডাক্তারের
+                  পুলিশের
                 </Text>
                 <Text
                   style={[styles.serviceText, {paddingTop: 5, fontSize: 18}]}>
@@ -88,7 +88,7 @@ export default function Hospital(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3ab54a',
+    backgroundColor: '#6495ED',
   },
   contentContainer: {
     flex: 1,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   takesewrvice: {
     flex: 1,
-    backgroundColor: '#3ab54a',
+    backgroundColor: '#6495ED',
     paddingTop: 30,
     paddingLeft: 25,
   },
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   takesewrviceImg: {
     flex: 1,
-    backgroundColor: '#3ab54a',
+    backgroundColor: '#6495ED',
     justifyContent: 'center',
     alignItems: 'center',
   },
