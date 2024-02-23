@@ -1,14 +1,12 @@
 import React from 'react';
 import {
-  Image,
-  Linking,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Image,
+    SafeAreaView,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 import Ct_employee from '../componnent/Ct_employee';
 
@@ -96,7 +94,7 @@ export default function FireService_list(props) {
           <View>
             <Text style={styles.Service}>
               {' '}
-              কর্মকর্তাবৃন্দ, তালিকা এবং ফোন নম্বর
+              কর্মকর্তাবৃন্দ, তালিকা এবং মোবাইল নম্বর
             </Text>
           </View>
           <ScrollView style={{backgroundColor: '#CCCCFF'}}>

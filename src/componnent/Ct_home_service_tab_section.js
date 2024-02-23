@@ -136,12 +136,14 @@ export default function Ct_home_service_tab_section(props) {
           <Ct_img_btn
             img={upazilaHuman_img}
             title={'উপজেলা নির্বাহী অফিসার'}
-            pressFunc
+            pressFunc={'Upazila Officer'}
+            navigation={props.navigation}
           />
           <Ct_img_btn
             img={upazilaNirbachon_img}
             title={'উপজেলা নির্বাচন অফিস'}
-            pressFunc
+            pressFunc={'Upozila Nirbachon Office'}
+            navigation={props.navigation}
           />
         </View>
       ) : null}

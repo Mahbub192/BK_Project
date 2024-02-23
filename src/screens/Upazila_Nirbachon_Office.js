@@ -1,55 +1,51 @@
 import React from 'react';
 import {
-    Image,
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    View
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 import Ct_employee from '../componnent/Ct_employee';
 
-let img = require('../assets/police/police.png');
+let img = require('../assets/images/service/nirbachon.png');
 let img1 = require('../assets/images/hospital/emergency-call.png');
 let img2 = require('../assets/images/hospital/doctors.png');
 let callImage = require('../assets/call.png');
 
-export default function Police_list(props) {
+export default function Upazila_Nirbachon_Office(props) {
   const doctorList = [
     {
       id: 1,
-      doctorName: 'মোহাম্মদ আবদুল আহাদ খান',
-      title: 'ভারপাপ্ত কর্মকর্তা ( ওসি )',
-      mobileNumber: '০১৩২০১০৫৩৩৫',
-      officeNumber: '০১৩২০১০৫৩৩৫',
+      doctorName: 'তাহমীদ হাসান মেহেদী',
+      title: 'ডাটা এন্ট্রি অপারেটর',
+      mobileNumber: '০১৯১৭৩০৫০৮২',
     },
     {
       id: 2,
-      doctorName: 'সঞ্জয় কুমার সাহা',
-      title: 'পুলিশ পরিদর্শক (তদন্ত)',
-      mobileNumber: '০১৩২০১০৫৩৩৬',
-      officeNumber: '০১৩২০১০৫৩৩৬',
+      doctorName: '	মোঃ শাহাদাত হোসাইন',
+      title: 'ডাটা এন্ট্রি অপারেটর',
+      mobileNumber: '০১৭৫১৩০১৮৩০',
     },
     {
       id: 3,
-      doctorName: 'তারেক মোহাম্মদ মাসুদ',
-      title: 'এসআই (নি:)',
-      mobileNumber: '০১৭১৯৭৮৯৫৪২',
-      officeNumber: '০১৭১৯৭৮৯৫৪২',
+      doctorName: '	হযরত আলী',
+      title: 'স্ক্যানিং এন্ড ইকুইপমেন্ট মেইনটেন্যান্স অপারেটর',
+      mobileNumber: '০১৯৪৮৩৮৯৫৩৮',
     },
     {
       id: 4,
-      doctorName: 'মোঃ আবু সাঈদ',
-      title: 'এসআই (নি:)',
-      mobileNumber: '০১৬২১৭৭৮১৫৬',
-      officeNumber: '০১৬২১৭৭৮১৫৬',
+      doctorName: 'মোহাম্মদ মাসুদ করিম',
+      title: '	অফিস সহায়ক',
+      mobileNumber: '০১৭২৮৬৮৪৩২২',
     },
     {
       id: 5,
-      doctorName: 'পারভেজ রানা',
-      title: 'কনস্টেবল (কম্পিউটার অপারেটর)',
-      mobileNumber: '০১৯১৯৭৪৫৩৬২',
+      doctorName: 'মোঃ সুমন মিয়া',
+      title: 'পরিচ্ছন্নতা কর্মী',
+      mobileNumber: '০১৯২১৩৩৯৭০৯',
     },
   ];
 
@@ -62,8 +58,8 @@ export default function Police_list(props) {
       />
       <View style={styles.contentContainer}>
         <View style={styles.takesewrvice}>
-          <Text style={styles.Taketext}>পুলিশ স্টেশন</Text>
-          <Text style={styles.Taketext}>সেবা নিন</Text>
+          <Text style={styles.Taketext}>উপজেলা নির্বাচন</Text>
+          <Text style={styles.Taketext}>অফিস,বকশীগঞ্জ</Text>
         </View>
         <View style={styles.takesewrviceImg}>
           <Image source={img} style={styles.img} />
@@ -74,12 +70,12 @@ export default function Police_list(props) {
           <View>
             <Text style={styles.Service}>
               {' '}
-              কর্মকর্তাবৃন্দ, তালিকা এবং মোবাইল নম্বর
+              কর্মচারীবৃন্দ তালিকা এবং মোবাইল নম্বর
             </Text>
           </View>
           <ScrollView style={{backgroundColor: '#CCCCFF'}}>
             {doctorList.map(singleDoctor => (
-              <Ct_employee singleDoctor={singleDoctor}></Ct_employee>
+              <Ct_employee singleDoctor={singleDoctor} />
             ))}
           </ScrollView>
         </View>
@@ -91,7 +87,7 @@ export default function Police_list(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6495ED',
+    backgroundColor: '#3ab54a',
   },
   contentContainer: {
     flex: 1,
@@ -103,23 +99,24 @@ const styles = StyleSheet.create({
   },
   takesewrvice: {
     flex: 1,
-    backgroundColor: '#6495ED',
+    backgroundColor: '#3ab54a',
     paddingTop: 30,
     paddingLeft: 25,
   },
   Taketext: {
     color: 'white',
-    fontSize: 25,
+    fontSize: 20,
   },
   takesewrviceImg: {
     flex: 1,
-    backgroundColor: '#6495ED',
+    backgroundColor: '#3ab54a',
     justifyContent: 'center',
     alignItems: 'center',
   },
   img: {
     height: 100,
     width: 100,
+    borderRadius: 60,
   },
   curveContainer: {
     marginTop: 0,

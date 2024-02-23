@@ -1,14 +1,12 @@
 import React from 'react';
 import {
   Image,
-  Linking,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import Ct_employee from '../componnent/Ct_employee';
 
@@ -28,7 +26,7 @@ export default function Hospital_Doctor_list(props) {
     },
     {
       id: 2,
-      doctorName: '	দিলীপ কুমার রায়',
+      doctorName: '	ডা: দিলীপ কুমার রায়',
       title: 'Jr. Consultant (Anesthesiology)',
       mobileNumber: '০১৭৭৫৬২৪৯৫০',
       officeNumber: '০১৭৭৫৬২৪৯৫০',
@@ -42,7 +40,7 @@ export default function Hospital_Doctor_list(props) {
     },
     {
       id: 4,
-      doctorName: 'Md. Wali Ullah Molla',
+      doctorName: 'Dr. Md. Wali Ullah Molla',
       title: 'Medical Officer',
       mobileNumber: '০১৭১৪৩২৫৯৪৪',
       officeNumber: '০১৭১৪৩২৫৯৪৪',
@@ -63,7 +61,7 @@ export default function Hospital_Doctor_list(props) {
     },
     {
       id: 7,
-      doctorName: '	মোঃ মনিরুজ্জামান',
+      doctorName: 'ডা: মোঃ মনিরুজ্জামান',
       title: 'Medical Officer',
       mobileNumber: '০১৭১৮৫১৫২০৫',
       officeNumber: '০১৭১৮৫১৫২০৫',
@@ -112,7 +110,7 @@ export default function Hospital_Doctor_list(props) {
           <View>
             <Text style={styles.Service}>
               {' '}
-              ডাক্তার, নার্সের তালিকা এবং ফোন নম্বর
+              ডাক্তার, নার্সের তালিকা এবং মোবাইল নম্বর
             </Text>
           </View>
           <ScrollView style={{backgroundColor: '#CCCCFF'}}>

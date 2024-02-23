@@ -12,6 +12,8 @@ import FireService from '../screens/Fireservice';
 import Fireservice_Emergency_Call from '../screens/Fireservice_Emergency_Call';
 import FireService_list from '../screens/FireService_list';
 import Ambulance_list from '../screens/Ambulance _list';
+import Upazila_Officer from '../screens/Upazila_Officer';
+import Upazila_Nirbachon_Office from '../screens/Upazila_Nirbachon_Office';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +46,12 @@ function Layout() {
         <Stack.Screen name="FireService list" component={FireService_list} />
 
         <Stack.Screen name="Ambulance list" component={Ambulance_list} />
+
+        <Stack.Screen name="Upazila Officer" component={Upazila_Officer} />
+        <Stack.Screen
+          name="Upozila Nirbachon Office"
+          component={Upazila_Nirbachon_Office}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

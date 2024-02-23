@@ -21,73 +21,10 @@ export default function Ambulance_list(props) {
   const doctorList = [
     {
       id: 1,
-      doctorName: 'ডা: মোহাম্মদ আজিজুল হক',
-      title: 'উপজেলা স্বাস্থ্য পঃপঃ কর্মকর্তা',
-      mobileNumber: '০১৭১১০২২৯১৪',
-      officeNumber: '০১৮১৮৮০৯৭৭৩',
-    },
-    {
-      id: 2,
-      doctorName: '	দিলীপ কুমার রায়',
-      title: 'Jr. Consultant (Anesthesiology)',
-      mobileNumber: '০১৭৭৫৬২৪৯৫০',
-      officeNumber: '০১৭৭৫৬২৪৯৫০',
-    },
-    {
-      id: 3,
-      doctorName: 'ডাঃ মোঃ মোশাররফ হোসেন',
-      title: 'RMO',
-      mobileNumber: '০১৭৫১৭৭৮২১৭',
-      officeNumber: '০১৭৫১৭৭৮২১৭',
-    },
-    {
-      id: 4,
-      doctorName: 'Md. Wali Ullah Molla',
-      title: 'Medical Officer',
-      mobileNumber: '০১৭১৪৩২৫৯৪৪',
-      officeNumber: '০১৭১৪৩২৫৯৪৪',
-    },
-    {
-      id: 5,
-      doctorName: 'ডাঃ আবিদা জাহান',
-      title: 'Medical Officer',
-      mobileNumber: '০১৫২১৫৭৯৯৭১',
-      officeNumber: '০১৫২১৫৭৯৯৭১',
-    },
-    {
-      id: 6,
-      doctorName: '	ডাঃ হোমায়রা ইয়াসমিন',
-      title: 'Medical Officer',
-      mobileNumber: '০১৭৫৩৬৯৫০১৪',
-      officeNumber: '০১৭৫৩৬৯৫০১৪',
-    },
-    {
-      id: 7,
-      doctorName: '	মোঃ মনিরুজ্জামান',
-      title: 'Medical Officer',
-      mobileNumber: '০১৭১৮৫১৫২০৫',
-      officeNumber: '০১৭১৮৫১৫২০৫',
-    },
-    {
-      id: 8,
-      doctorName: '	মারজিয়া বেগম',
-      title: 'সিনিয়র স্ট্যাফ নার্স',
-      mobileNumber: '০১৮৭৮৪৭০১৬৭	',
-      officeNumber: '০১৮৭৮৪৭০১৬৭',
-    },
-    {
-      id: 9,
-      doctorName: 'মাহমুদা সিদ্দিকা',
-      title: 'সিনিয়র ষ্টাফ নার্স',
-      mobileNumber: '০১৭২৮৩৩৪১৬৩',
-      officeNumber: '০১৭২৮৩৩৪১৬৩',
-    },
-    {
-      id: 10,
-      doctorName: 'শাহনাজ বেগম',
-      title: 'সিনিয়র ষ্টাফ নার্স',
-      mobileNumber: '০১৭৯১২০০৬৬১',
-      officeNumber: '০১৭৯১২০০৬৬১',
+      doctorName: 'আলামিন',
+      title: 'নন-এসি অ্যাম্বুলেন্স',
+      mobileNumber: '01912199178',
+      officeNumber: '01312199178',
     },
   ];
 
@@ -112,12 +49,73 @@ export default function Ambulance_list(props) {
           <View>
             <Text style={styles.Service}>
               {' '}
-              অ্যাম্বুলেন্সের ড্রাইভারের তালিকা এবং ফোন নম্বর
+              অ্যাম্বুলেন্সের ড্রাইভারের তালিকা এবং মোবাইল নম্বর
             </Text>
           </View>
           <ScrollView style={{backgroundColor: '#CCCCFF'}}>
             {doctorList.map(singleDoctor => (
-              <Ct_employee singleDoctor={singleDoctor}></Ct_employee>
+              //   <Ct_employee singleDoctor={singleDoctor} />
+              <View style={styles.card}>
+                <View>
+                  <View style={{}}>
+                    <Text style={styles.cardText}>
+                      নাম: {singleDoctor?.doctorName}
+                    </Text>
+                    <Text style={styles.cardText}> {singleDoctor?.title}</Text>
+                  </View>
+                  <View
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      gap: 10,
+                      alignItems: 'center',
+                      marginTop: 8,
+                    }}>
+                    <TouchableOpacity
+                      onPress={() =>
+                        Linking.openURL(`tel:${singleDoctor?.mobileNumber}`)
+                      }>
+                      <Image source={callImage} style={styles.callImage} />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      onPress={() =>
+                        Linking.openURL(`tel:${singleDoctor?.mobileNumber}`)
+                      }>
+                      <Text style={[styles.cardText]}>
+                        মোবাইল : {singleDoctor?.mobileNumber}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  {singleDoctor?.officeNumber && (
+                    <View
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: 10,
+                        alignItems: 'center',
+                        marginTop: 8,
+                      }}>
+                      <TouchableOpacity
+                        onPress={() =>
+                          Linking.openURL(`tel:${singleDoctor?.officeNumber}`)
+                        }>
+                        <Image source={callImage} style={styles.callImage} />
+                      </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={() =>
+                          Linking.openURL(`tel:${singleDoctor?.officeNumber}`)
+                        }>
+                        <Text style={[styles.cardText]}>
+                          মোবাইল : {singleDoctor?.officeNumber}
+                        </Text>
+                      </TouchableOpacity>
+                    </View>
+                  )}
+                </View>
+              </View>
             ))}
           </ScrollView>
         </View>
@@ -177,5 +175,34 @@ const styles = StyleSheet.create({
     fontFamily: 'nunito-regular',
     fontSize: 20,
     textAlign: 'center',
+  },
+
+  card: {
+    borderWidth: 1,
+    borderColor: '#fff',
+    borderRadius: 8,
+    padding: 16,
+    marginBottom: 16,
+    margin: 10,
+    backgroundColor: 'white',
+
+    //Shadow
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+
+    elevation: 6,
+  },
+  cardText: {
+    color: 'black',
+    fontSize: 18,
+  },
+  callImage: {
+    height: 20,
+    width: 20,
   },
 });
